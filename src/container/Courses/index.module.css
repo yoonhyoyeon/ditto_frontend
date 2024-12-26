@@ -1,0 +1,86 @@
+.container {
+    width: 100%;
+    padding: 60px 7%;
+    box-sizing: border-box;
+}
+.container .header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 36px;
+}
+.container .header .title {
+    color: var(--color-blue-1);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+}
+.container .header button {
+    padding: 12px 30px;
+}
+.container .header .btn_wrap {
+    width: auto;
+}
+.container .header .btn_wrap img {
+    margin-right: 10px;
+}
+.container .course_list {
+    width: 100%;
+}
+
+/* popup */
+.popup_contents {
+    width: 40vw;
+    box-sizing: border-box;
+    padding: 0 7%;
+}
+.popup_contents .title {
+    text-align: center;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    color: var(--color-blue-0);
+    margin-bottom: 90px;
+}
+.popup_contents .form .input_wrap {
+    display: flex;
+    margin-top: 40px;
+    align-items: center;
+}
+.popup_contents .form .input_wrap .txt {
+    width: 150px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+}
+.popup_contents .form .input_wrap .file_wrap {
+    display: flex;
+}
+.popup_contents .form .input_wrap .file_wrap input {
+    flex: 1;
+}
+.popup_contents .form .input_wrap .file_wrap .sub_txt {
+    flex: 1;
+    color: var(--color-sub-txt-1);
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+}
+.popup_contents .form .checkbox_wrap {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    margin-left: 160px;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+.popup_contents .form .checkbox_wrap input {
+    margin-right: 8px;
+}
+.popup_contents .form button {
+    width: 50%;
+    margin: 0 auto;
+}

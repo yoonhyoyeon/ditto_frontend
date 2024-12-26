@@ -1,0 +1,100 @@
+.container {
+    background-color: var(--color-nav-bg);
+    border-right: 1px solid var(--color-nav-border);
+    width: 260px;
+    height: 100vh;
+    padding: 30px 16px;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    overflow: hidden;
+    position: fixed;
+}
+.container .nav_wrap {
+    width: 100%;
+    margin-top: 50px;
+    transition: .3s ease;
+}
+.container .nav_wrap .item {
+    color: var(--color-blue-1);
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 42px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    opacity: .3;
+    padding: 0 18px;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+.container .nav_wrap .item img {
+    margin-right: 16px;
+}
+.container .nav_wrap .item.active {
+    background-color: var(--color-nav-border);
+    opacity: 1;
+}
+.container .nav_wrap .item:hover {
+    background-color: var(--color-nav-border);
+}
+.container .footer {
+    color: var(--color-sub-txt-1);
+    position: absolute;
+    bottom: 36px;
+    left: 30px;
+    font-size: 12px;
+    font-weight: 500;
+}
+.container .footer span {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.container .footer span img {
+    margin-right: 16px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    width: 100vw;
+    height: 60px;
+    background-color: #fff;
+    border-bottom: 1px solid var(--color-nav-border);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    padding: 0 7%;
+    box-sizing: border-box;
+}
+.navbar .name {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+}
+
+.container .detail_nav_wrap {
+    width: 227px;
+    position: absolute;
+    left: 120%;
+    top: 70px;
+    transition: .3s ease;
+}
+.container .detail_nav_wrap .top {
+    margin-bottom: 21px;
+}
+.container .detail_nav_wrap img {
+    margin-right: 20px;
+}
+.container .detail_nav_wrap span {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+}

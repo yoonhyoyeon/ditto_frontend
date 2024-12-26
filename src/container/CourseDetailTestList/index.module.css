@@ -1,0 +1,47 @@
+.container {
+    width: 100%;
+    padding: 60px 7%;
+    box-sizing: border-box;
+}
+.container .title_row {
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+.container .row {
+    margin-bottom: 30px;
+}
+.container .row .title_wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+.container .row .title_wrap .title {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    color: var(--color-blue-1);
+}
+.container .row .title_wrap .title .subtxt {
+    color: rgba(0, 0, 0, 0.30);
+font-family: Pretendard;
+font-size: 16px;
+font-style: normal;
+font-weight: 300;
+line-height: 100%; /* 16px */
+margin-left: 16px;
+}
+.container .row .title_wrap a {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+font-style: normal;
+font-weight: 500;
+color: #AAACC6;
+} 
+.container .row .title_wrap .btn_wrap button {
+    padding: 10px 30px;
+    font-size: 14px!important;
+} 

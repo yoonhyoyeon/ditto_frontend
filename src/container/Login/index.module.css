@@ -1,0 +1,49 @@
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+.container .left_area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    position: relative;
+}
+.container .left_area .logo {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+}
+.container .left_area h1 {
+    color: var(--color-blue-0);
+    font-size: 30px;
+    font-weight: 300;
+    margin-bottom: 12px;
+}
+.container .left_area p {
+    color: var(--color-black-opacity-30);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+}
+.container .left_area .subtxt_wrap span {
+    color: var(--color-black-opacity-30);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    float: right;
+}
+.container .left_area .subtxt_wrap a {
+    color: var(--color-blue-0);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+}
+.container .right_area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    background-color: var(--color-blue-background);
+}

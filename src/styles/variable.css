@@ -1,0 +1,14 @@
+:root {
+    --color-black: #000;
+    --color-white: #fff;
+    --color-opacity-30: rgba(0,0,0,.3);
+    --color-sub-txt: #9B9B9B;
+    --color-sub-txt-1: #AAACC6;
+    --color-blue-0: #2A4AFF;
+    --color-blue-0-opcaity-20: rgba(42, 74, 255, 0.2);
+    --color-blue-1: #233182;
+    --color-blue-background: #F6F7FE;
+    --color-blue-background-1: rgba(170, 172, 198, 0.15);
+    --color-nav-bg: rgb(246 247 249);
+    --color-nav-border: rgba(170, 172, 198, 0.2);
+}

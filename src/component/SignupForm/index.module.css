@@ -1,0 +1,29 @@
+.container {
+    width: 300px;
+    margin-top: 58px;
+    margin-bottom: 16px;
+}
+.container .input_wrap {
+    margin-bottom: 24px;
+}
+.container .input_wrap:last-of-type {
+    margin-bottom: 40px;
+}
+.container .input_wrap span {
+    display: inline-block;
+    color: var(--color-black-opacity-30);
+    margin-bottom: 12px;
+    font-size: 14px;
+    font-weight: 400;
+}
+.container .checkbox_wrap {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.container .checkbox_wrap label {
+    color: var(--color-black);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+}

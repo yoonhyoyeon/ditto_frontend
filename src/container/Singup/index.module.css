@@ -1,0 +1,25 @@
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.container .logo {
+    position: absolute;
+    top: 25px;
+    left: 25px
+}
+.container .contents {
+    width: 300px;
+    display: inline-flex;
+    flex-direction: column;
+}
+.container .contents h1 {
+    text-align: center;
+    color: var(--color-blue-0);
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 500;
+}
