@@ -7,7 +7,7 @@ export const metadata = {
 
 const CourseDetailStudentListPage = async({params}) => {
   const id = (await params).id;
-  const course_name = await getCourse(id);
+  const course_name = await getCourse(id).subjectName;
   return (
     <CourseDetailStudentList course_name={course_name} />
   );

@@ -23,8 +23,8 @@ const Navigation = () => {
     }, []);
 
     const saveCourseName = async() => {
-        setCourse_name(await getCourse(params.id).subjectName);
-        console.log(await getCourse(params.id));
+        const data = await getCourse(params.id);
+        setCourse_name(data.subjectName);
     }
     useEffect(() => {
         if(params.id!==undefined) saveCourseName();
@@ -66,19 +66,19 @@ const Navigation = () => {
                         <Link href="/service/courses"><img src="/images/icon_back.png" /></Link>
                         <span>{course_name}</span>
                     </div>
-                    <Link href="/service/courses/detail/1/home">
+                    <Link href={`/service/courses/detail/${params.id}/home`}>
                         <div className={`${styles.item} ${path.endsWith('/home') ? styles.active : null}`}>
                             <img src="/images/icon_home.svg"/>
                             <span>홈</span>
                         </div>
                     </Link>
-                    <Link href="/service/courses/detail/1/studentlist">
+                    <Link href={`/service/courses/detail/${params.id}/studentlist`}>
                         <div className={`${styles.item} ${path.endsWith('/studentlist') ? styles.active : null}`}>
                             <img src="/images/icon_book.svg"/>
                             <span>수강생 목록</span>
                         </div>
                     </Link>
-                    <Link href="/service/courses/detail/1/testlist">
+                    <Link href={`/service/courses/detail/${params.id}/testlist`}>
                         <div className={`${styles.item} ${path.endsWith('/testlist') ? styles.active : null}`}>
                             <img src="/images/icon_hat2.svg"/>
                             <span>시험 목록</span>

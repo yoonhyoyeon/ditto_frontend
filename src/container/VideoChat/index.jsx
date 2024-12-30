@@ -1,14 +1,11 @@
+// pages/videochat.js
 "use client";
-import styles from './index.module.css';
-import TestNavigation from '@/component/TestNavigation';
 import { useEffect, useRef, useState } from 'react';
-import { garadata_result } from '@/constants';
 import io from 'socket.io-client';
-import { getCount } from '@/service';
-import Table from '@/component/Table';
+import styles from './index.module.css';
 
-const Test = () => {
-    const localVideoRef = useRef(null);
+export default function VideoChat() {
+  const localVideoRef = useRef(null);
   const remoteVideosRef = useRef(null);
   const chatAreaRef = useRef(null);
   const messageInputRef = useRef(null);
@@ -16,31 +13,6 @@ const Test = () => {
   const socketRef = useRef(null);
   const localStreamRef = useRef(null);
   const room = 'testRoom';
-
-  const [isComplete, setIsComplete] = useState(false);
-  const [data, setData] = useState([]);
-
-  const saveData = async() => {
-    const arr = await getCount();
-    const newData = garadata_result.map((v, i) => {
-      const count = arr[i];
-      return [...v, count===undefined? Math.floor(Math.random() * 100)+'점' : count+'점', <img src="/images/icon_download.png" />]
-    });
-    setData(newData);
-  }
-  useEffect(() => {
-    saveData();
-  }, []);
-  console.log(data);
-  const flex = [1,1,1,1,1];
-  const titles = ['이름', '수험번호', '생년월일', '위헙점수', '영상다운로드'];
-  
-
-  const completeTest = () => {
-    alert('시험이 종료되었습니다.');
-    setIsComplete(true);
-    socketRef.current.emit('terminate');
-  }
 
   useEffect(() => {
     // Socket.io 연결
@@ -137,20 +109,12 @@ const Test = () => {
       }
     };
   }, []);
-    return (
-        <div className={styles.container}>
-            <TestNavigation completeTest={completeTest}/>
-            
-            {
-              isComplete ? (
-                <div className={styles.finish}>
-                  <h1>시험이 종료되었습니다.</h1>
-                  <Table flex={flex} data={data} titles={titles}></Table>
-                </div>
-              ) : ( <div className={styles.videos}><div className={styles.imgs} ref={remoteVideosRef}></div></div>)
-            }
-        </div>
-    )
-}
 
-export default Test;
+  return (
+    <div>
+      <div className={styles.videos}>
+        <div ref={remoteVideosRef} />
+      </div>
+    </div>
+  );
+}

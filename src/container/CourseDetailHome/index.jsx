@@ -4,10 +4,11 @@ import styles from './index.module.css';
 import Table from '@/component/Table';
 import { students } from '@/constants';
 
-const CourseDetailHome = ({tests, course_name}) => {
+const CourseDetailHome = ({tests, course_name, course_id}) => {
+    console.log(course_name);
     const test_temp_titles = ['이름', '수험번호', '비밀번호', '생년월일'];
-    const test_temp_data = students.map((v, i) => {
-        if(i<6) return v;
+    const test_temp_data = students.filter((v, i) => {
+        if(i<=6) return v;
     });
     const test_temp_flex=[1,1,1,1];
     
@@ -41,7 +42,7 @@ const CourseDetailHome = ({tests, course_name}) => {
                 <div className={styles.right}>
                     <div className={styles.title_wrap}>
                         <span className={styles.title}>수강생 목록</span>
-                        <Link href="/service/courses/detail/1/studentlist">
+                        <Link href={`/service/courses/detail/${course_id}/studentlist`}>
                             <span>전체보기</span>
                             <img src="/images/icon_right_arrow.png" />
                         </Link>
@@ -52,7 +53,7 @@ const CourseDetailHome = ({tests, course_name}) => {
             <div className={styles.row}>
                 <div className={styles.title_wrap}>
                     <span className={styles.title}>시험 목록</span>
-                    <Link href="/service/courses/detail/1/testlist">
+                    <Link href={`/service/courses/detail/${course_id}/testlist`}>
                         <span>전체보기</span>
                         <img src="/images/icon_right_arrow.png" />
                     </Link>

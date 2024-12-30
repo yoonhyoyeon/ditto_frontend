@@ -9,3 +9,28 @@
     box-sizing: border-box;
     z-index: 102;
 }
+.container .videos {
+    position: absolute;
+    right: 0;
+    top: 20px;
+    width: calc(100vw - 300px);
+}
+.container .videos .imgs {
+    width: 100%;
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.container .finish {
+    position: absolute;
+    right: 0;
+    top: 20px;
+    width: calc(100vw - 300px);
+    padding-right: 100px;
+    box-sizing: border-box;
+}
+.container .finish h1 {
+    text-align: center;
+    color: #fff;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}

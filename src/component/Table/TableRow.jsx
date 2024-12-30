@@ -1,6 +1,7 @@
 import styles from './index.module.css';
 
-const TableRow = ({flex, data, isLinked}) => {
+const TableRow = ({flex, data}) => {
+    console.log(data);
     return (
         <div className={styles.TableRow} style={data[data.length-2]==="완료" ? { backgroundColor: 'var(--color-blue-0-opcaity-20)'} : null}>
             {data.map((v, i) => (

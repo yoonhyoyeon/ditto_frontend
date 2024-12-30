@@ -5,7 +5,7 @@
     border-radius: 10px;
     color: #fff;
     box-sizing: border-box;
-    padding: 12px;
+    padding: 12px 20px;
     display: flex;
     flex-direction: column;
 }
@@ -26,7 +26,12 @@
     margin-bottom: 40px;
 }
 .container .row2 .test_name {
-    
+    color: #FFF;
+font-family: Pretendard;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 100%; /* 16px */
 }
 .container .row3 {
     display: flex;
@@ -34,6 +39,44 @@
     justify-content: space-between;
     margin-bottom: 40px;
 }
+.container .row3 .time {
+    color: #FFF;
+
+font-family: Pretendard;
+font-size: 28px;
+font-style: normal;
+font-weight: 500;
+line-height: 100%; /* 28px */
+}
 .container .student_list {
     flex: 1;
+}
+.container .student_list .title {
+    color: rgba(255, 255, 255, 0.60);
+font-family: Pretendard;
+font-size: 12px;
+font-style: normal;
+font-weight: 500;
+line-height: 100%; /* 12px */
+margin-bottom: 20px;
+}
+.container .student_list .item {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+.container .student_list .item.active {
+    background-color: #F43B4A;
+    transition: .1s ease;
+    border-radius: 4px;
+}
+.container .student_list .item .count {
+    display: flex;
+    align-items: center;
+}
+.container .student_list .item .count img {
+    margin-right: 3px;
 }

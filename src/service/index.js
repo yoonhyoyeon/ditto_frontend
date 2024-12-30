@@ -210,3 +210,26 @@ export const getTest = async (name) => {
         return false;
     }
 }
+
+export const getCount = async() => {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/result`, {
+        method: 'GET',
+        headers: {
+            'accept': 'application/json',
+        }
+    });
+    const result = await response.json();
+    
+    if(result.message === "inquiry_success") {
+        return result.data.map((v) => {
+            return v.result.totalScore;
+        })
+    }
+    else {
+        alert(result.message);
+        return false;
+    }
+}
+
+
+
