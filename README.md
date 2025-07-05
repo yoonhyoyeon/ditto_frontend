@@ -1,9 +1,7 @@
 # Ditto 🕵️‍♂️
 실시간 시험 부정행위 감지·방지 서비스
 
-![Ditto Banner](./public/ditto-banner.png)
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+<img src="./public/images/logo.svg" width="400"></img>
 
 ## 🏆 수상 내역
 - **2024 세종대학교 AI/SW 해커톤 대상 (1위)**  
